@@ -1,0 +1,22 @@
+﻿@using App.Domain.Core.BookEntity.DTOs
+@model BookDTO
+
+@{
+    ViewData["Title"] = "Add Book Page";
+    Layout = "_AdminLayout";
+}
+
+
+<div class="container  col-lg-5">
+    <form asp-action="AddBook" method="post">
+        <label class="form-label" asp-for="@Model.Title"></label>
+        <input type="text" class="form-control" asp-for="@Model.Title" />
+        <label class="form-label" asp-for="@Model.AuthorName"></label>
+        <input type="text" class="form-control" asp-for="@Model.AuthorName" />
+        <label class="form-label" asp-for="@Model.Price"></label>
+        <input type="number" class="form-control" asp-for="@Model.Price" />
+        <div class=" my-3 d-grid gap-2">
+            <input type="submit" class="btn btn-primary" value="submit" />
+        </div>
+    </form>
+</div>

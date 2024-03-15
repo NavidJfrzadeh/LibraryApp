@@ -1,0 +1,37 @@
+﻿@using App.Core
+@model Book
+
+@{
+    ViewData["Title"] = "Book Details";
+    Layout = "_AdminLayout";
+}
+
+<div class="container col-lg-5">
+    <h2>جزئیات کتاب</h2>
+</div>
+
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th scope="row">عنوان</th>
+            <th scope="row">نام نویسنده</th>
+            <th scope="row">قیمت</th>
+            <th scope="row">قرض گرفته شده</th>
+            <th scope="row">نام مشتری</th>
+            <th scope="row">عملیات</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        <tr>
+            <td class="col">@Model.Title</td>
+            <td class="col">@Model.AuthorName</td>
+            <td class="col">@Model.Price</td>
+            <td class="col">@Model.IsBorrowd</td>
+            <td class="col">@if(Model.Customer != null){@Model.Customer.FirstName  @Model.Customer.LastName}</td>
+            <td class="col">
+                <a class="btn btn-sm btn-outline-warning" asp-action="EditBook" asp-route-id="@Model.Id">ویرایش</a>
+                <a class="btn btn-sm btn-outline-danger" asp-action="DeleteBook" asp-route-id="@Model.Id">حذف</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
