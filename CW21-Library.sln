@@ -13,23 +13,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5432731E-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{8AC15456-2CAB-444B-892B-DD430C49D185}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Domain.Core", "App.Core\App.Domain.Core.csproj", "{23AB7889-0471-4B45-BC6B-E63D4C4C5F56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Domain.Core", "App.Core\App.Domain.Core.csproj", "{23AB7889-0471-4B45-BC6B-E63D4C4C5F56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Domain.AppServices", "App.Domain.AppServices\App.Domain.AppServices.csproj", "{827C1186-B49C-462E-986C-22A61C22D149}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Domain.AppServices", "App.Domain.AppServices\App.Domain.AppServices.csproj", "{827C1186-B49C-462E-986C-22A61C22D149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Domain.Services", "App.Domain.Services\App.Domain.Services.csproj", "{F3403192-B4F8-4209-BAC6-366ED93F974D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Domain.Services", "App.Domain.Services\App.Domain.Services.csproj", "{F3403192-B4F8-4209-BAC6-366ED93F974D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.EndPoint.UI.MVC", "App.EndPoint.UI.MVC\App.EndPoint.UI.MVC.csproj", "{E8F28421-3547-4944-806C-66D8359650D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.EndPoint.UI.MVC", "App.EndPoint.UI.MVC\App.EndPoint.UI.MVC.csproj", "{E8F28421-3547-4944-806C-66D8359650D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{3EC11952-FCB8-4924-9CF6-C4F438D9E9B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{C8C73B68-0F2A-4C30-BBAA-1F661BC193B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Infra.Data.Repo.EF", "App.Infra.Data.Repo.EF\App.Infra.Data.Repo.EF.csproj", "{618EDC9D-6869-4E25-9B64-491E06A37461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Infra.Data.Repo.EF", "App.Infra.Data.Repo.EF\App.Infra.Data.Repo.EF.csproj", "{618EDC9D-6869-4E25-9B64-491E06A37461}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Infra.DataBase.SQLServer.EF", "App.Infra.DataBase.SQLServer.EF\App.Infra.DataBase.SQLServer.EF.csproj", "{A2A3E733-86E2-42C0-9D09-85A95BC05240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Infra.DataBase.SQLServer.EF", "App.Infra.DataBase.SQLServer.EF\App.Infra.DataBase.SQLServer.EF.csproj", "{A2A3E733-86E2-42C0-9D09-85A95BC05240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Infra.DataBase.MemoryDataBase", "App.Infra.DataBase.MemoryDataBase\App.Infra.DataBase.MemoryDataBase.csproj", "{E537D055-7065-4D05-9887-A833DA82548A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Infra.DataBase.MemoryDataBase", "App.Infra.DataBase.MemoryDataBase\App.Infra.DataBase.MemoryDataBase.csproj", "{E537D055-7065-4D05-9887-A833DA82548A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Infra.DataBase.Repo.Dapper", "App.Infra.DataBase.Repo.Dapper\App.Infra.DataBase.Repo.Dapper.csproj", "{F37637F4-7F27-48DF-8123-6539C0238AA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{E537D055-7065-4D05-9887-A833DA82548A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E537D055-7065-4D05-9887-A833DA82548A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E537D055-7065-4D05-9887-A833DA82548A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F37637F4-7F27-48DF-8123-6539C0238AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37637F4-7F27-48DF-8123-6539C0238AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37637F4-7F27-48DF-8123-6539C0238AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F37637F4-7F27-48DF-8123-6539C0238AA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{618EDC9D-6869-4E25-9B64-491E06A37461} = {3EC11952-FCB8-4924-9CF6-C4F438D9E9B0}
 		{A2A3E733-86E2-42C0-9D09-85A95BC05240} = {C8C73B68-0F2A-4C30-BBAA-1F661BC193B3}
 		{E537D055-7065-4D05-9887-A833DA82548A} = {C8C73B68-0F2A-4C30-BBAA-1F661BC193B3}
+		{F37637F4-7F27-48DF-8123-6539C0238AA1} = {3EC11952-FCB8-4924-9CF6-C4F438D9E9B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BBDB55B7-6DF3-4F3C-9FC5-FC6867AF10C2}
