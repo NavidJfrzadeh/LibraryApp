@@ -20,5 +20,10 @@ namespace App.Domain.Services.BookEntity
         {
             return _bookAppService.GetById(id);
         }
+
+        public List<Book> NoneBorrowedBooks()
+        {
+            return _bookAppService.NoneBorrowedBooks();
+        }
     }
 }

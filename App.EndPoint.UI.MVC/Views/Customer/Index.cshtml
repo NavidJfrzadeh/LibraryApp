@@ -1,0 +1,49 @@
+﻿@using App.Core
+@using App.Domain.Core.BookEntity.DTOs
+@model List<Book>
+
+@{
+    ViewData["Title"] = "All Books";
+    Layout = "_CustomerLayout";
+}
+
+<div class="container col-lg-4">
+    @if (ViewData["successLogin"] != null)
+    {
+        <div class="text-center" role="alert">
+            <span class="text-success">@ViewData["successLogin"].ToString()</span>
+        </div>
+    }
+</div>
+
+<div class="container col-5 mb-5">
+    <div class="border-bottom mx-auto text-center">
+        <h2>کتاب ها</h2>
+    </div>
+</div>
+
+<div class="container col-lg-6">
+    <table class="table table-striped table-responsive table-hover">
+        <thead>
+            <tr>
+                <th scope="col">عنوان</th>
+                <th scope="col">نویسنده</th>
+                <th scope="col">قیمت</th>
+                <th scope="col">عملیات</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.AuthorName</td>
+                    <td>@book.Price</td>
+                    <td>
+                        <a class="btn btn-sm btn-outline-success" asp-action="BookDetails" asp-route-id="@book.Id">مشاهده بیشتر</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

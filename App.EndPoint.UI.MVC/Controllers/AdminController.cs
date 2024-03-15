@@ -9,24 +9,24 @@ namespace App.EndPoint.UI.MVC.Controllers
     public class AdminController : Controller
     {
         private readonly IAdminService _adminService;
-        private readonly IBookService _bookSerivce;
+        private readonly IBookService _bookSrevice;
         public AdminController(IAdminService adminService, IBookService bookService)
         {
             _adminService = adminService;
-            _bookSerivce = bookService;
+            _bookSrevice = bookService;
         }
 
 
         public IActionResult Index()
         {
-            var AllBooks = _bookSerivce.GetAll();
+            var AllBooks = _bookSrevice.GetAll();
             return View(AllBooks);
         }
 
 
         public IActionResult BookDetails(int id)
         {
-            var targetBook = _bookSerivce.GetById(id);
+            var targetBook = _bookSrevice.GetById(id);
             return View(targetBook);
         }
 
@@ -54,7 +54,7 @@ namespace App.EndPoint.UI.MVC.Controllers
         [HttpGet]
         public IActionResult EditBook(int id)
         {
-            var targetBook = _bookSerivce.GetById(id);
+            var targetBook = _bookSrevice.GetById(id);
             return View(targetBook);
         }
 

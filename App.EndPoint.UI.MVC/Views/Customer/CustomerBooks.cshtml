@@ -1,0 +1,40 @@
+﻿@using App.Core
+@using App.Domain.Core.BookEntity.DTOs
+@model List<Book>
+
+@{
+    ViewData["Title"] = "Customer Books";
+    Layout = "_CustomerLayout";
+}
+
+<div class="container col-5 mb-5">
+    <div class="border-bottom mx-auto text-center">
+        <h2>کتاب های شما</h2>
+    </div>
+</div>
+
+<div class="container col-lg-6">
+    <table class="table table-striped table-responsive table-hover">
+        <thead>
+            <tr>
+                <th scope="col">عنوان</th>
+                <th scope="col">نویسنده</th>
+                <th scope="col">قیمت</th>
+                <th scope="col">عملیات</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.AuthorName</td>
+                    <td>@book.Price</td>
+                    <td>
+                        <a class="btn btn-sm btn-outline-warning" asp-action="ReturnBook" asp-route-id="@book.Id"> بازگرداندن</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

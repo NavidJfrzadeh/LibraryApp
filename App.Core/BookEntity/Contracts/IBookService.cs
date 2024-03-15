@@ -7,5 +7,6 @@ namespace App.Domain.Core.BookEntity.Contracts
     {
         public List<BookDTO> GetAll();
         public Book GetById(int id);
+        public List<Book> NoneBorrowedBooks();
     }
 }

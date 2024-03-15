@@ -1,0 +1,32 @@
+﻿@using App.Core
+@model Book
+
+@{
+    ViewData["Title"] = "Book Details";
+    Layout = "_CustomerLayout";
+}
+
+<div class="container col-lg-5">
+    <h2>جزئیات کتاب</h2>
+</div>
+
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th scope="row">عنوان</th>
+            <th scope="row">نام نویسنده</th>
+            <th scope="row">قیمت</th>
+            <th scope="row">عملیات</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        <tr>
+            <td class="col">@Model.Title</td>
+            <td class="col">@Model.AuthorName</td>
+            <td class="col">@Model.Price</td>
+            <td class="col">
+                <a class="btn btn-sm btn-outline-primary" asp-action="BorrowBook" asp-route-id="@Model.Id">قرض گرفتن</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

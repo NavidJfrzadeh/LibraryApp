@@ -25,6 +25,12 @@ namespace App.Infra.Data.Repo.EF.BookEntity
             _context.SaveChanges();
         }
 
+        public List<Book> NoneBorrowedBooks()
+        {
+            var borrwedBooks = _context.books.Where(b => !b.IsBorrowd).ToList();
+            return borrwedBooks;
+        }
+
         public List<BookDTO> GetAll()
         {
             var books = _context.books.Select(b => new BookDTO()
@@ -49,6 +55,36 @@ namespace App.Infra.Data.Repo.EF.BookEntity
             var targetBook = GetById(id);
             _context.books.Remove(targetBook);
             _context.SaveChanges();
+        }
+
+        public bool UpdateBook(int bookId, int UserID)
+        {
+            var targetBook = GetById(bookId);
+            if (targetBook != null)
+            {
+                targetBook.CustomerId = UserID;
+                targetBook.IsBorrowd = true;
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public void ReturnBook(int bookId)
+        {
+            var book = GetById(bookId);
+            if (book != null)
+            {
+                book.CustomerId = null;
+                book.IsBorrowd = false;
+                _context.SaveChanges();
+            }
+        }
+
+        public List<Book> CustomerBooks(int CustomerId)
+        {
+            var books = _context.books.Where(b => b.CustomerId == CustomerId).ToList();
+            return books;
         }
     }
 }
